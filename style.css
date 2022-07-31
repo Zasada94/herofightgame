@@ -1,14 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
-	background: "blue";
 	width: 100%;
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	font-family: "VT323", monospace;
+}
+
+div.container {
+	display: flex;
+	border: 5px solid #353ca7;
+	border-radius: 20px;
+	padding: 40px;
+	flex-direction: column;
+	align-items: center;
+}
+
+a {
+	font-family: "Fira-sans", sans-serif;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+	padding: 10px;
+	text-decoration: none;
+	border: 2px solid #733fa1;
+	border-radius: 5px;
+	color: black;
+	width: 100%;
+	font-weight: 900;
+}
+
+a:hover {
+	background-color: #733fa1;
+	border-color: #353ca7;
+	color: white;
+}
+
+.container h2 {
+	margin-bottom: 10px;
 }
 
 .menu {
@@ -24,9 +62,10 @@ body {
 	}
 }
 
-#p1 {
+#p1,
+#p2 {
 	width: 100px;
-	height: 100px;
+	height: auto;
 }
 
 .p1Info {
@@ -36,7 +75,6 @@ body {
 	align-items: center;
 	height: 300px;
 	width: 300px;
-	/*   background: red; */
 }
 
 #p1Name {
@@ -47,11 +85,6 @@ body {
 	font-size: 50px;
 }
 
-#p2 {
-	width: 100px;
-	height: 100px;
-}
-
 .p2Info {
 	display: flex;
 	flex-direction: column;
@@ -59,7 +92,6 @@ body {
 	align-items: center;
 	height: 300px;
 	width: 300px;
-	/*   background: red; */
 }
 
 #p2Name {
@@ -82,7 +114,6 @@ body {
 	justify-content: space-around;
 	height: 40px;
 	width: 100px;
-	/*   background: blue; */
 }
 
 .HealDiv {
@@ -91,7 +122,6 @@ body {
 	justify-content: space-around;
 	height: 40px;
 	width: 100px;
-	/*   background: yellow; */
 }
 
 #attack {
@@ -116,7 +146,6 @@ body {
 	height: 50px;
 	width: 120px;
 	border-radius: 20px;
-	/*   border:none; */
 	background: #02cf02;
 	outline: none;
 	color: white;
@@ -127,15 +156,19 @@ body {
 	color: #3dff3d;
 }
 
-#reset {
+#reset,
+#back {
 	margin-top: 20px;
 	height: 50px;
 	width: 100px;
 	border-radius: 20px;
-	/*   border:none; */
 	background: #ff8800;
 	outline: none;
 	color: white;
+}
+
+#back {
+	background: grey;
 }
 
 .resultContainer {
@@ -145,4 +178,69 @@ body {
 	align-items: center;
 	height: 150px;
 	width: 300px;
+}
+
+.pickTitle {
+	margin-top: 20px;
+}
+
+#newHeroButton,
+#newHeroButton2,
+#searchButton,
+#searchButton2 {
+	font-weight: 700;
+	background-image: linear-gradient(to right, #e5adff, #733fa1);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: 0.4s;
+}
+
+#newHeroButton:hover,
+#newHeroButton2:hover,
+#searchButton:hover,
+#searchButton2:hover {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+#heroImage,
+#heroImage2 {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+#heroImage img,
+#heroImage2 img {
+	max-width: 50%;
+	height: auto;
+	align-self: center;
+}
+
+#heroImage h2,
+#heroImage2 h2 {
+	background-image: linear-gradient(to right, #733fa1, #e5adff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	align-self: center;
+	font-size: 35px;
+}
+
+#heroImage2 p,
+#heroImage p {
+	background-image: linear-gradient(#e5adff, #733fa1);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 3px;
+	text-align: center;
+	font-size: 20px;
+}
+
+#heroImage p span,
+#heroImage2 p span {
+	background-image: initial;
+	-webkit-background-clip: initial;
+	-webkit-text-fill-color: initial;
 }

@@ -4,91 +4,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Fighting Game</title>
+  <title>Hero Fight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-
-  <br>
-
-  <div class="menu">
-    <div class="p1Info">
-
-      <div id="p1Name">Player 1</div>
-
-      <img id="p1" src="https://i.gifer.com/origin/00/0019f6845ceaa9347b881ccbe8f5644a_w200.gif" />
-
-      <div class="playerControls">
-
-        <div class="AttackDiv">
-          <h3>Q:</h3>
-          <button onclick="player1.strike(player1, player2, player1.attackDmg)" id="attack">
-            Attack
-          </button>
-        </div>
-
-        <div class="HealDiv">
-          <h3>A:</h3>
-          <button onclick="player1.heal(player1)" id="heal">
-            Heal
-          </button>
-        </div>
-      </div>
-
-      <div id="p1Health">100</div>
-    </div>
-
-    <button id="play">Simulate</button>
-
-    <div class="p2Info">
-
-      <div id="p2Name">Player 2</div>
-
-      <img id="p2" src="https://giffiles.alphacoders.com/132/13200.gif" />
-      <div class="playerControls">
-        <div class="AttackDiv">
-          <h3>P:</h3>
-          <button onclick="player2.strike(player2, player1, player2.attackDmg)" id="attack">
-            Attack
-          </button>
-        </div>
-        <div class="HealDiv">
-          <h3>L:</h3>
-          <button onclick="player2.heal(player2)" id="heal">
-            Heal
-          </button>
-        </div>
-      </div>
-
-      <div id="p2Health">100</div>
-    </div>
-
-  </div>
-  <br>
-
-  <div class="resultContainer">
-    <div id="result"></div>
-    <button id="reset" onclick="game.reset(p1,p2)">Reset</button>
+  <div class="container">
+    <h1>Hero Fighting Game</h1>
+    <a href="./heroPick.html" class="playButton">PLAY</a>
+    <h2>How to play:</h2>
+    <h3>- Player 1 attack with "Q" and heal with "A" keys</h3>
+    <h3>- Player 2 attack with "P" and heal with "L" keys</h3>
+    <a href="https://github.com/Zasada94">Back to Github</a>
   </div>
 
-  <audio id="p1attack" controls style="display:none">
-    <source src="sounds/fastpunch.mp3" type="audio/mpeg">
-  </audio>
-  <audio id="p1heal" controls style="display:none">
-    <source src="sounds/fastheal.mp3" type="audio/mpeg">
-  </audio>
-  <audio id="p2attack" controls style="display:none">
-    <source src="sounds/quickhit.mp3" type="audio/mpeg">
-  </audio>
-  <audio id="p2heal" controls style="display:none">
-    <source src="sounds/quickheal.mp3" type="audio/mpeg">
-  </audio>
-  <audio id="victory" controls style="display:none">
-    <source src="sounds/victory.mp3" type="audio/mpeg">
-  </audio>
-
-  <script src="script.js"></script>
 </body>
 
 </html>

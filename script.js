@@ -4,6 +4,8 @@ let p1NameDiv = document.getElementById("p1Name");
 let p2NameDiv = document.getElementById("p2Name");
 let p1HealthDiv = document.getElementById("p1Health");
 let p2HealthDiv = document.getElementById("p2Health");
+let imgContainer1Div = document.getElementById("imgContainer1");
+let imgContainer2Div = document.getElementById("imgContainer2");
 
 // ** Check if either players health is  0 and if it is, then update isOver to true **
 const updateGame = (p1, p2, gameState) => {
@@ -11,6 +13,8 @@ const updateGame = (p1, p2, gameState) => {
 	p2NameDiv.innerText = p2.name;
 	p1HealthDiv.innerText = p1.health;
 	p2HealthDiv.innerText = p2.health;
+	imgContainer1Div.innerHTML = `<img id="p1" src='${img1}'/>`;
+	imgContainer2Div.innerHTML = `<img id="p2" src='${img2}'/>`;
 	if (p2.health <= 0 || p1.health <= 0) {
 		game.isOver = true;
 		gameState = game.isOver;
@@ -20,10 +24,11 @@ const updateGame = (p1, p2, gameState) => {
 };
 
 class Player {
-	constructor(name, health, attackDmg) {
+	constructor(name, health, attackDmg, healValue) {
 		this.name = name;
 		this.health = health;
 		this.attackDmg = attackDmg;
+		this.healValue - healValue;
 	}
 
 	// ** Attack an enemy with a random number from 0 to YOUR attackDmg bonus **
@@ -37,8 +42,8 @@ class Player {
 	}
 
 	// ** Heal the player for random number from  1 to 20 **
-	heal(player) {
-		let healAmount = Math.ceil(Math.random() * 20);
+	heal(player, healValue) {
+		let healAmount = Math.ceil(Math.random() * healValue);
 		player.health += healAmount;
 		updateGame(p1, p2, game.isOver);
 		return console.log(`${player.name} healed for ${healAmount}`);
@@ -67,8 +72,8 @@ class Game {
 
 	// ** Reset the players health back to it's original state and isOver to FALSE **
 	reset(p1, p2) {
-		p1.health = 1000;
-		p2.health = 1000;
+		p1.health = hp;
+		p2.health = hp2;
 		game.isOver = false;
 		resultDiv.innerText = "";
 		updateGame(p1, p2, this.isOver);
@@ -89,22 +94,34 @@ class Game {
 				p2.strike(p2, p1, p2.attackDmg);
 			}
 			if (p1.health > 0 && p2.health > 0) {
-				p1.heal(p1);
+				p1.heal(p1, def);
 			}
 			if (p1.health > 0 && p2.health > 0) {
-				p2.heal(p2);
+				p2.heal(p2, def);
 			}
-		}, 300);
+		}, 100);
 
 		return this.declareWinner(this.isOver, p1, p2);
 	}
 }
-let player1 = new Player("Pablo", 1000, 100);
-let player2 = new Player("Rafaello", 1000, 100);
+
+let name1 = localStorage.getItem("cachedName");
+let hp = localStorage.getItem("cachedHP");
+let atk = localStorage.getItem("cachedAtk");
+let def = localStorage.getItem("cachedDef");
+let img1 = localStorage.getItem("cachedImg");
+
+let name2 = localStorage.getItem("cachedName2");
+let hp2 = localStorage.getItem("cachedHP2");
+let atk2 = localStorage.getItem("cachedAtk2");
+let def2 = localStorage.getItem("cachedDef2");
+let img2 = localStorage.getItem("cachedImg2");
+
+let player1 = new Player(name1, hp, atk, def, img1);
+let player2 = new Player(name2, hp2, atk2, def2, img2);
 
 let p1 = player1;
 let p2 = player2;
-
 let game = new Game();
 
 updateGame(p1, p2, game.isOver);
@@ -118,13 +135,15 @@ document.addEventListener("keydown", function (e) {
 	if (e.key == "q" && p2.health > 0 && game.isOver == false) {
 		p1.strike(p1, p2, p1.attackDmg);
 		document.getElementById("p1attack").play();
+		console.log(def, hp, p1.health.type);
 	}
 });
 
 document.addEventListener("keydown", function (e) {
 	if (e.key == "a" && p2.health > 0 && game.isOver == false) {
-		p1.heal(p1);
+		p1.heal(p1, def);
 		document.getElementById("p1heal").play();
+		console.log(def, hp, p1.health.type);
 	}
 });
 
@@ -138,7 +157,11 @@ document.addEventListener("keydown", function (e) {
 
 document.addEventListener("keydown", function (e) {
 	if (e.key == "l" && p1.health > 0 && game.isOver == false) {
-		p2.heal(p2);
+		p2.heal(p2, def2);
 		document.getElementById("p2heal").play();
 	}
 });
+
+const backToMenu = () => {
+	location.href = "./index.html";
+};
