@@ -117,8 +117,8 @@ let atk2 = localStorage.getItem("cachedAtk2");
 let def2 = localStorage.getItem("cachedDef2");
 let img2 = localStorage.getItem("cachedImg2");
 
-let player1 = new Player(name1, hp, atk, def, img1);
-let player2 = new Player(name2, hp2, atk2, def2, img2);
+let player1 = new Player(name1, Number(hp), Number(atk), Number(def), img1);
+let player2 = new Player(name2, Number(hp2), Number(atk2), Number(def2), img2);
 
 let p1 = player1;
 let p2 = player2;
@@ -140,7 +140,7 @@ document.addEventListener("keydown", function (e) {
 });
 
 document.addEventListener("keydown", function (e) {
-	if (e.key == "a" && p2.health > 0 && game.isOver == false) {
+	if (e.key == "a" && p2.health > 0) {
 		p1.heal(p1, def);
 		document.getElementById("p1heal").play();
 		console.log(def, hp, p1.health.type);
@@ -156,7 +156,7 @@ document.addEventListener("keydown", function (e) {
 });
 
 document.addEventListener("keydown", function (e) {
-	if (e.key == "l" && p1.health > 0 && game.isOver == false) {
+	if (e.key == "l" && p1.health > 0) {
 		p2.heal(p2, def2);
 		document.getElementById("p2heal").play();
 	}
