@@ -13,8 +13,8 @@ const updateGame = (p1, p2, gameState) => {
 	p2NameDiv.innerText = p2.name;
 	p1HealthDiv.innerText = p1.health;
 	p2HealthDiv.innerText = p2.health;
-	imgContainer1Div.innerHTML = `<img id="p1" src='${img1}'/>`;
-	imgContainer2Div.innerHTML = `<img id="p2" src='${img2}'/>`;
+	imgContainer1Div.innerHTML = `<img id="p1" src='${img1}' width='440' height ='640'/>`;
+	imgContainer2Div.innerHTML = `<img id="p2" src='${img2}'' width='440' height ='640'/>`;
 	if (p2.health <= 0 || p1.health <= 0) {
 		game.isOver = true;
 		gameState = game.isOver;
