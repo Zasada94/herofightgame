@@ -206,41 +206,35 @@ div.container {
 		font-size: 20px;
 	}
 }
-@media (min-width: 1080px) {
-	#p1,
-	#p2 {
-		width: 450px;
-		height: 610px;
-		align-self: center;
-	}
 
-@media (min-width: 1280px) {
-	#p1Name,
-	#p2Name {
-		font-size: 70px;
-	}
-	#vs {
-		font-size: 80px;
-	}
-	#reset,
-	#back,
-	#play {
-		margin-bottom: 10px;
-		height: 60px;
-		width: 150px;
-		border-radius: 20px;
-		font-size: 20px;
-	}
-	#p1Health,
-	#p2Health {
-		font-size: 70px;
-	}
-	#result {
-		font-size: 70px;
-		height: 60px;
-		margin-bottom: 20px;
-	}
-	div.container {
-		max-width: 1400px;
+	@media (min-width: 1280px) {
+		#p1Name,
+		#p2Name {
+			font-size: 70px;
+		}
+		#vs {
+			font-size: 80px;
+		}
+		#reset,
+		#back,
+		#play {
+			margin-bottom: 10px;
+			height: 60px;
+			width: 150px;
+			border-radius: 20px;
+			font-size: 20px;
+		}
+		#p1Health,
+		#p2Health {
+			font-size: 70px;
+		}
+		#result {
+			font-size: 70px;
+			height: 60px;
+			margin-bottom: 20px;
+		}
+		div.container {
+			max-width: 1400px;
+		}
 	}
 }
