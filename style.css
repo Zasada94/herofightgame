@@ -17,12 +17,17 @@ body {
 
 div.container {
 	display: flex;
-	border: 5px solid #353ca7;
+	border: 5px solid #c1950e;
 	border-radius: 20px;
 	padding: 40px;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 20px;
+	max-width: 80%;
+	width: 100%;
+	background-image: url("./photo/background.jpg");
+	background-position: center;
+	color: #dcdcdc;
 }
 
 a {
@@ -30,155 +35,81 @@ a {
 	font-size: 30px;
 	display: flex;
 	justify-content: center;
-	margin: 20px;
+	margin: 10px;
 	padding: 10px;
 	text-decoration: none;
 	border: 2px solid #733fa1;
 	border-radius: 5px;
-	color: black;
-	width: 100%;
+	color: #dcdcdc;
+	width: 70%;
 	font-weight: 900;
+}
+
+.container h1 {
+	background-image: linear-gradient(#c1950e, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.container h2 {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.container h3 {
+	align-self: flex-start;
+	margin: 5px;
 }
 
 a:hover {
 	background-color: #733fa1;
 	border-color: #353ca7;
-	color: white;
+	color: black;
 }
 
-.container h2 {
-	margin-bottom: 10px;
-}
-
-.menu {
-	width: 50%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 720px) {
 	.menu {
 		width: 75%;
 	}
+	div.container {
+		max-width: 95%;
+	}
+	a {
+		font-size: 20px;
+		padding: 5px;
+	}
 }
+@media (min-width: 720px) {
+	.container h1 {
+		font-size: 60px;
+	}
+	.container h2 {
+		font-size: 40px;
+	}
 
-#p1,
-#p2 {
-	width: 100px;
-	height: auto;
+	.container h3 {
+		font-size: 27px;
+	}
+	.innerContainer #newHeroButton,
+	.innerContainer #newHeroButton2,
+	.innerContainer #searchButton,
+	.innerContainer #searchButton2,
+	.innerContainer #searchInput,
+	.innerContainer #searchInput2 {
+		font-size: 20px;
+	}
+	#heroImage2 p,
+	#heroImage p {
+		font-size: 30px !important;
+	}
 }
-
-.p1Info {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 300px;
-	width: 300px;
-}
-
-#p1Name {
-	font-size: 30px;
-}
-
-#p1Health {
-	font-size: 50px;
-}
-
-.p2Info {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 300px;
-	width: 300px;
-}
-
-#p2Name {
-	font-size: 30px;
-}
-
-#p2Health {
-	font-size: 50px;
-}
-
-.playerControls {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-.AttackDiv {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	height: 40px;
-	width: 100px;
-}
-
-.HealDiv {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	height: 40px;
-	width: 100px;
-}
-
-#attack {
-	height: 30px;
-	width: 60px;
-	border-radius: 50px;
-	border: none;
-	background: #ffff01;
-	outline: none;
-}
-
-#heal {
-	height: 30px;
-	width: 60px;
-	border-radius: 50px;
-	border: none;
-	background: #7dffff;
-	outline: none;
-}
-
-#play {
-	height: 50px;
-	width: 120px;
-	border-radius: 20px;
-	background: #02cf02;
-	outline: none;
-	color: white;
-}
-
-#result {
-	font-size: 50px;
-	color: #3dff3d;
-}
-
-#reset,
-#back {
-	margin-top: 20px;
-	height: 50px;
-	width: 100px;
-	border-radius: 20px;
-	background: #ff8800;
-	outline: none;
-	color: white;
-}
-
-#back {
-	background: grey;
-}
-
-.resultContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	height: 150px;
-	width: 300px;
+@media (min-width: 1280px) {
+	div.container {
+		max-width: 50%;
+	}
+	.container h1 {
+		font-size: 70px;
+	}
 }
 
 .pickTitle {
@@ -189,11 +120,21 @@ a:hover {
 #newHeroButton2,
 #searchButton,
 #searchButton2 {
+	font-size: 15px;
 	font-weight: 700;
 	background-image: linear-gradient(to right, #e5adff, #733fa1);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	transition: 0.4s;
+	padding: 2px;
+	border: 1px solid #733fa1;
+	border-radius: 5px;
+}
+
+#searchInput,
+#searchInput2 {
+	font-size: 15px;
+	padding: 2px;
 }
 
 #newHeroButton:hover,
@@ -208,12 +149,13 @@ a:hover {
 #heroImage2 {
 	display: flex;
 	flex-direction: column;
-	margin-top: 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 #heroImage img,
 #heroImage2 img {
-	max-width: 50%;
+	max-width: 80%;
 	height: auto;
 	align-self: center;
 }

@@ -24,11 +24,12 @@ const updateGame = (p1, p2, gameState) => {
 };
 
 class Player {
-	constructor(name, health, attackDmg, healValue) {
+	constructor(name, health, attackDmg, healValue, img) {
 		this.name = name;
 		this.health = health;
 		this.attackDmg = attackDmg;
-		this.healValue - healValue;
+		this.healValue = healValue;
+		this.img = img;
 	}
 
 	// ** Attack an enemy with a random number from 0 to YOUR attackDmg bonus **
@@ -141,7 +142,7 @@ document.addEventListener("keydown", function (e) {
 
 document.addEventListener("keydown", function (e) {
 	if (e.key == "a" && p2.health > 0) {
-		p1.heal(p1, def);
+		p1.heal(p1, p1.healValue);
 		document.getElementById("p1heal").play();
 		console.log(def, hp, p1.health.type);
 	}
@@ -157,7 +158,7 @@ document.addEventListener("keydown", function (e) {
 
 document.addEventListener("keydown", function (e) {
 	if (e.key == "l" && p1.health > 0) {
-		p2.heal(p2, def2);
+		p2.heal(p2, p2.healValue);
 		document.getElementById("p2heal").play();
 	}
 });
