@@ -141,12 +141,18 @@ div.container {
 	height: auto;
 	width: 90%;
 }
+@media (max-width: 320px) {
+	#p1,
+	#p2 {
+		width: 80px;
+		height: 120px;
+	}
+}
 @media (min-width: 480px) {
 	#p1,
 	#p2 {
 		width: 200px;
 		height: 280px;
-		align-self: center;
 	}
 }
 
@@ -159,7 +165,6 @@ div.container {
 	#p2 {
 		width: 300px;
 		height: 420px;
-		align-self: center;
 	}
 	#vs {
 		font-size: 60px;
