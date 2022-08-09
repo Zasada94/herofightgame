@@ -35,7 +35,7 @@ class Player {
 	// ** Attack an enemy with a random number from 0 to YOUR attackDmg bonus **
 	strike(player, enemy, attackDmg) {
 		let damageAmount = Math.ceil(Math.random() * attackDmg);
-		enemy.health -= damageAmount;
+		enemy.health -= Number(damageAmount);
 		updateGame(p1, p2, game.isOver);
 		return console.log(
 			`${player.name} dealt ${damageAmount} damage to ${enemy.name}`
@@ -45,7 +45,7 @@ class Player {
 	// ** Heal the player for random number from  1 to 20 **
 	heal(player, healValue) {
 		let healAmount = Math.ceil(Math.random() * healValue);
-		player.health += healAmount;
+		player.health += Number(healAmount);
 		updateGame(p1, p2, game.isOver);
 		return console.log(`${player.name} healed for ${healAmount}`);
 	}
@@ -73,8 +73,8 @@ class Game {
 
 	// ** Reset the players health back to it's original state and isOver to FALSE **
 	reset(p1, p2) {
-		p1.health = hp;
-		p2.health = hp2;
+		p1.health = Number(hp);
+		p2.health = Number(hp2);
 		game.isOver = false;
 		resultDiv.innerText = "";
 		updateGame(p1, p2, this.isOver);
@@ -144,7 +144,6 @@ document.addEventListener("keydown", function (e) {
 	if (e.key == "a" && p2.health > 0) {
 		p1.heal(p1, p1.healValue);
 		document.getElementById("p1heal").play();
-		console.log(def, hp, p1.health.type);
 	}
 });
 
