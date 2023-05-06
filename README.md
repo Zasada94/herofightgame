@@ -1,5 +1,5 @@
 # Hero Fight Game
-A Hero Combat Game combining previous apps: Super Hero App and Fighting Game. Developed using vanilla JS.
+A Hero Combat Game developed using vanilla JS.
 
 ## Table of contents
 * [Technologies](#technologies)
