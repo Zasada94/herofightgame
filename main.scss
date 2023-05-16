@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-
+@import "game";
 * {
 	margin: 0;
 	padding: 0;
@@ -25,7 +25,7 @@ div.container {
 	margin-top: 20px;
 	max-width: 80%;
 	width: 100%;
-	background-image: url("./photo/background.jpg");
+	background-image: url("../../photo/background.jpg");
 	background-position: center;
 	color: #dcdcdc;
 }

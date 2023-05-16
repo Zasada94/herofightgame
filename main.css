@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "VT323", monospace;
+  background-image: url("./photo/background.jpg");
+  background-position: center;
+  color: #dcdcdc;
+  border: 5px solid #c1950e;
+  border-radius: 20px;
+  max-width: 95%;
+}
+
+.menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#p1,
+#p2 {
+  width: 120px;
+  height: 165px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.p1Info,
+.p2Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45%;
+  padding: 10px;
+}
+
+#p1Name,
+#p2Name {
+  font-size: 20px;
+}
+
+#p1Health,
+#p2Health {
+  font-size: 50px;
+}
+
+.playerControls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.AttackDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 40px;
+  width: 100px;
+}
+
+.HealDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 40px;
+  width: 100px;
+}
+
+#attack {
+  height: 30px;
+  width: 60px;
+  border-radius: 50px;
+  border: none;
+  background: #ffff01;
+  outline: none;
+}
+
+#heal {
+  height: 30px;
+  width: 60px;
+  border-radius: 50px;
+  border: none;
+  background: #7dffff;
+  outline: none;
+}
+
+#result {
+  font-size: 35px;
+  color: #3dff3d;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+#vs {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c1950e), to(red));
+  background-image: linear-gradient(#c1950e, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+}
+
+#reset,
+#back,
+#play {
+  font-family: "Fira-sans", sans-serif;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 120px;
+  border-radius: 20px;
+  background: #ff8800;
+  outline: none;
+  color: #dcdcdc;
+  font-size: 15px;
+}
+
+#back {
+  background: grey;
+}
+
+#play {
+  background: #02cf02;
+}
+
+.resultContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: 90%;
+}
+
+@media (max-width: 320px) {
+  #p1,
+#p2 {
+    width: 80px;
+    height: 120px;
+  }
+}
+@media (min-width: 480px) {
+  #p1,
+#p2 {
+    width: 200px;
+    height: 280px;
+  }
+}
+@media (min-width: 720px) {
+  #p1Name,
+#p2Name {
+    font-size: 50px;
+  }
+  #p1,
+#p2 {
+    width: 300px;
+    height: 420px;
+  }
+  #vs {
+    font-size: 60px;
+  }
+  #reset,
+#back,
+#play {
+    margin-bottom: 10px;
+    height: 60px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  #p1Health,
+#p2Health {
+    font-size: 60px;
+  }
+  .AttackDiv {
+    height: 60px;
+    width: 130px;
+    font-size: 40px;
+  }
+  .HealDiv {
+    height: 60px;
+    width: 130px;
+    font-size: 40px;
+  }
+  #attack {
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+  }
+  #heal {
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  #p1Name,
+#p2Name {
+    font-size: 70px;
+  }
+  #vs {
+    font-size: 80px;
+  }
+  #reset,
+#back,
+#play {
+    margin-bottom: 10px;
+    height: 60px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  #p1Health,
+#p2Health {
+    font-size: 70px;
+  }
+  #result {
+    font-size: 70px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  div.container {
+    max-width: 1400px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "VT323", monospace;
+}
+
+div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 5px solid #c1950e;
+  border-radius: 20px;
+  padding: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  max-width: 80%;
+  width: 100%;
+  background-image: url("../../photo/background.jpg");
+  background-position: center;
+  color: #dcdcdc;
+}
+
+a {
+  font-family: "Fira-sans", sans-serif;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  border: 2px solid #733fa1;
+  border-radius: 5px;
+  color: #dcdcdc;
+  width: 70%;
+  font-weight: 900;
+}
+
+.container h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c1950e), to(red));
+  background-image: linear-gradient(#c1950e, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container h2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.container h3 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 5px;
+}
+
+a:hover {
+  background-color: #733fa1;
+  border-color: #353ca7;
+  color: black;
+}
+
+@media (max-width: 720px) {
+  .menu {
+    width: 75%;
+  }
+  div.container {
+    max-width: 95%;
+  }
+  a {
+    font-size: 20px;
+    padding: 5px;
+  }
+}
+@media (min-width: 720px) {
+  .container h1 {
+    font-size: 60px;
+  }
+  .container h2 {
+    font-size: 40px;
+  }
+  .container h3 {
+    font-size: 27px;
+  }
+  .innerContainer #newHeroButton,
+.innerContainer #newHeroButton2,
+.innerContainer #searchButton,
+.innerContainer #searchButton2,
+.innerContainer #searchInput,
+.innerContainer #searchInput2 {
+    font-size: 20px;
+  }
+  #heroImage2 p,
+#heroImage p {
+    font-size: 30px !important;
+  }
+}
+@media (min-width: 1280px) {
+  div.container {
+    max-width: 50%;
+  }
+  .container h1 {
+    font-size: 70px;
+  }
+}
+.pickTitle {
+  margin-top: 20px;
+}
+
+#newHeroButton,
+#newHeroButton2,
+#searchButton,
+#searchButton2 {
+  font-size: 15px;
+  font-weight: 700;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e5adff), to(#733fa1));
+  background-image: linear-gradient(to right, #e5adff, #733fa1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  padding: 2px;
+  border: 1px solid #733fa1;
+  border-radius: 5px;
+}
+
+#searchInput,
+#searchInput2 {
+  font-size: 15px;
+  padding: 2px;
+}
+
+#newHeroButton:hover,
+#newHeroButton2:hover,
+#searchButton:hover,
+#searchButton2:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+#heroImage,
+#heroImage2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#heroImage img,
+#heroImage2 img {
+  max-width: 80%;
+  height: auto;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+#heroImage h2,
+#heroImage2 h2 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#733fa1), to(#e5adff));
+  background-image: linear-gradient(to right, #733fa1, #e5adff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 35px;
+}
+
+#heroImage2 p,
+#heroImage p {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e5adff), to(#733fa1));
+  background-image: linear-gradient(#e5adff, #733fa1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 3px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#heroImage p span,
+#heroImage2 p span {
+  background-image: initial;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}/*# sourceMappingURL=main.css.map */
