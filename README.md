@@ -1,5 +1,5 @@
 # Hero Fight Game
-A Hero Combat Game combining previous apps: Super Hero App and Fighting Game. Developed using vanilla JS.
+A Hero Combat Game developed using vanilla JS.
 
 ## Table of contents
 * [Technologies](#technologies)
@@ -23,14 +23,11 @@ In project You are able to:
 * simulate the fight.
 
 ## Screens  
+![Screenshot](./screenshots/1.png)
+
 ![Screenshot](./screenshots/2.png)
 
 ![Screenshot](./screenshots/3.png)
-
-![Screenshot](./screenshots/4.png)
-
-### previous version: 
-![Screenshot](./screenshots/1.png) 
 
 ## Live :star2:
 https://zasada94.github.io/herofightgame/
