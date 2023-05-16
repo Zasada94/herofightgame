@@ -55,9 +55,15 @@ const showHeroInfo = (character) => {
 		localStorage.setItem("cachedDef", Number(def1) / 3);
 	}
 	if (atk1 == "null") {
-		localStorage.setItem("cachedAtk", Math.ceil(Math.random() * 400));
+		localStorage.setItem("cachedAtk", 50);
+	} else if (atk1 < 25) {
+		localStorage.setItem("cachedAtk", Number(atk1) + 45);
+	} else if (atk1 >= 25 && atk1 < 50) {
+		localStorage.setItem("cachedAtk", Number(atk1) + 30);
+	} else if (atk1 >= 50 && atk1 < 75) {
+		localStorage.setItem("cachedAtk", Number(atk1) + 15);
 	} else {
-		localStorage.setItem("cachedAtk", Number(atk1) * 4);
+		localStorage.setItem("cachedAtk", Number(atk1));
 	}
 	if (hp1 == "null") {
 		localStorage.setItem("cachedHP", Math.ceil(Math.random() * 500));
@@ -87,9 +93,15 @@ const showHeroInfo2 = (character2) => {
 		localStorage.setItem("cachedDef2", Number(def2) / 3);
 	}
 	if (atk2 == "null") {
-		localStorage.setItem("cachedAtk2", Math.ceil(Math.random() * 400));
+		localStorage.setItem("cachedAtk2", 50);
+	} else if (atk2 < 25) {
+		localStorage.setItem("cachedAtk2", Number(atk2) + 45);
+	} else if (atk2 >= 25 && atk2 < 50) {
+		localStorage.setItem("cachedAtk2", Number(atk2) + 30);
+	} else if (atk2 >= 50 && atk2 < 75) {
+		localStorage.setItem("cachedAtk2", Number(atk2) + 15);
 	} else {
-		localStorage.setItem("cachedAtk2", Number(atk2) * 4);
+		localStorage.setItem("cachedAtk2", Number(atk2));
 	}
 	if (hp2 == "null") {
 		localStorage.setItem("cachedHP2", Math.ceil(Math.random() * 500));

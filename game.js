@@ -35,6 +35,7 @@ class Player {
 	// ** Attack an enemy with a random number from 0 to YOUR attackDmg bonus **
 	strike(player, enemy, attackDmg) {
 		let damageAmount = Math.ceil(Math.random() * attackDmg);
+		console.log("aatack dmg", damageAmount);
 		enemy.health -= Number(damageAmount);
 		updateGame(p1, p2, game.isOver);
 		return console.log(
@@ -42,7 +43,7 @@ class Player {
 		);
 	}
 
-	// ** Heal the player for random number from  1 to 20 **
+	// ** Heal the player for random number  **
 	heal(player, healValue) {
 		let healAmount = Math.ceil(Math.random() * healValue);
 		player.health += Number(healAmount);
@@ -51,7 +52,7 @@ class Player {
 	}
 }
 
-// ** Create the Game class with all it's attributes and methods to run a match **
+// ** Game class with it's attributes and methods to run a match **
 class Game {
 	constructor() {
 		this.isOver = false;
