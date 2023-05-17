@@ -1,0 +1,91 @@
+
+.pickTitle {
+	margin-top: 20px;
+}
+
+#newHeroButton,
+#newHeroButton2,
+#searchButton,
+#searchButton2 {
+	font-size: 15px;
+	font-weight: 700;
+	background-image: linear-gradient(to right, #e5adff, #733fa1);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: 0.4s;
+	padding: 2px;
+	border: 1px solid #733fa1;
+	border-radius: 5px;
+}
+
+#searchInput,
+#searchInput2 {
+	font-size: 15px;
+	padding: 2px;
+}
+
+#newHeroButton:hover,
+#newHeroButton2:hover,
+#searchButton:hover,
+#searchButton2:hover {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+#heroImage,
+#heroImage2 {
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#heroImage img,
+#heroImage2 img {
+	max-width: 80%;
+	height: auto;
+	align-self: center;
+}
+
+#heroImage h2,
+#heroImage2 h2 {
+	background-image: linear-gradient(to right, #733fa1, #e5adff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	align-self: center;
+	font-size: 35px;
+}
+
+#heroImage2 p,
+#heroImage p {
+	background-image: linear-gradient(#e5adff, #733fa1);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 3px;
+	text-align: center;
+	font-size: 20px;
+}
+
+#heroImage p span,
+#heroImage2 p span {
+	background-image: initial;
+	-webkit-background-clip: initial;
+	-webkit-text-fill-color: initial;
+}
+
+@media (min-width: 720px) {
+	.innerContainer #newHeroButton,
+	.innerContainer #newHeroButton2,
+	.innerContainer #searchButton,
+	.innerContainer #searchButton2,
+	.innerContainer #searchInput,
+	.innerContainer #searchInput2 {
+		font-size: 20px;
+	}
+	#heroImage2 p,
+	#heroImage p {
+		font-size: 30px !important;
+	}
+}
