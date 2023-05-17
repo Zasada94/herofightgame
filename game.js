@@ -35,7 +35,7 @@ class Player {
 	// ** Attack an enemy with a random number from 0 to YOUR attackDmg bonus **
 	strike(player, enemy, attackDmg) {
 		let damageAmount = Math.ceil(Math.random() * attackDmg);
-		console.log("aatack dmg", damageAmount);
+		// console.log("aatack dmg", damageAmount);
 		enemy.health -= Number(damageAmount);
 		updateGame(p1, p2, game.isOver);
 		return console.log(

@@ -66,10 +66,17 @@ const showHeroInfo = (character) => {
 		localStorage.setItem("cachedAtk", Number(atk1));
 	}
 	if (hp1 == "null") {
-		localStorage.setItem("cachedHP", Math.ceil(Math.random() * 500));
+		localStorage.setItem("cachedHP", 400);
+	} else if (hp1 < 25) {
+		localStorage.setItem("cachedHP", Number(hp1) + 450);
+	} else if (hp1 >= 25 && hp1 < 50) {
+		localStorage.setItem("cachedHP", Number(hp1) + 425);
+	} else if (hp1 >= 50 && hp1 < 75) {
+		localStorage.setItem("cachedHP", Number(hp1) + 400);
 	} else {
-		localStorage.setItem("cachedHP", Number(hp1) * 5);
+		localStorage.setItem("cachedHP", Number(hp1));
 	}
+
 	return stats;
 };
 
@@ -104,9 +111,15 @@ const showHeroInfo2 = (character2) => {
 		localStorage.setItem("cachedAtk2", Number(atk2));
 	}
 	if (hp2 == "null") {
-		localStorage.setItem("cachedHP2", Math.ceil(Math.random() * 500));
+		localStorage.setItem("cachedHP2", 400);
+	} else if (hp2 < 25) {
+		localStorage.setItem("cachedHP2", Number(hp2) + 450);
+	} else if (hp2 >= 25 && hp2 < 50) {
+		localStorage.setItem("cachedHP2", Number(hp2) + 425);
+	} else if (hp2 >= 50 && hp2 < 75) {
+		localStorage.setItem("cachedHP2", Number(hp2) + 400);
 	} else {
-		localStorage.setItem("cachedHP2", Number(hp2) * 5);
+		localStorage.setItem("cachedHP2", Number(hp2) + 375);
 	}
 	return stats2;
 };
