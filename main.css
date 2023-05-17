@@ -21,28 +21,31 @@ body {
           align-items: center;
 }
 
-div.container {
-  width: 100%;
+div.gameContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 5px solid #c1950e;
+  border-radius: 20px;
+  padding: 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "VT323", monospace;
-  background-image: url("./photo/background.jpg");
-  background-position: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  max-width: 56vh;
+  max-height: 177vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../../photo/containerBg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../photo/containerBg.jpg");
+  background-size: cover;
   color: #dcdcdc;
-  border: 5px solid #c1950e;
-  border-radius: 20px;
-  max-width: 95%;
 }
 
 .menu {
@@ -296,6 +299,33 @@ div.container {
     max-width: 1400px;
   }
 }
+div.pickContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 5px solid #c1950e;
+  border-radius: 20px;
+  padding: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  max-width: 56vh;
+  max-height: 177vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../../photo/containerBg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../photo/containerBg.jpg");
+  background-size: cover;
+  color: #dcdcdc;
+}
+
 .pickTitle {
   margin-top: 20px;
 }
@@ -425,7 +455,7 @@ body {
   background-size: cover;
 }
 
-div.container {
+div.wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,9 +469,9 @@ div.container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 100vh;
   width: 100vw;
   max-width: 56vh;
@@ -450,6 +480,33 @@ div.container {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../photo/containerBg.jpg");
   background-size: cover;
   color: #dcdcdc;
+}
+
+div.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 a {
@@ -461,6 +518,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 10px;
   padding: 10px;
   text-decoration: none;
   border: 2px solid #733fa1;

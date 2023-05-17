@@ -10,19 +10,22 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
-div.container {
-	width: 100%;
+div.gameContainer {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: "VT323", monospace;
-	background-image: url("./photo/background.jpg");
-	background-position: center;
-	color: #dcdcdc;
 	border: 5px solid #c1950e;
 	border-radius: 20px;
-	max-width: 95%;
+	padding: 40px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 100vh;
+	width: 100vw;
+	max-width: 56vh;
+	max-height: 177vw;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../../photo/containerBg.jpg");
+	background-size: cover;
+	color: #dcdcdc;
 }
 .menu {
 	width: 100%;

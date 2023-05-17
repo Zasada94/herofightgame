@@ -1,3 +1,21 @@
+div.pickContainer {
+	display: flex;
+	border: 5px solid #c1950e;
+	border-radius: 20px;
+	padding: 40px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	max-width: 56vh;
+	max-height: 177vw;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("../../photo/containerBg.jpg");
+	background-size: cover;
+	color: #dcdcdc;
+}
+
 
 .pickTitle {
 	margin-top: 20px;

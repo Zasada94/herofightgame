@@ -20,14 +20,14 @@ body {
 	background-size: cover;
 }
 
-div.container {
+div.wrapper {
 	display: flex;
 	border: 5px solid #c1950e;
 	border-radius: 20px;
 	padding: 40px;
 	flex-direction: column;
 	align-items: center;
-	justify-content: start;
+	justify-content: space-between;
 	height: 100vh;
 	width: 100vw;
 	max-width: 56vh;
@@ -38,12 +38,24 @@ div.container {
 	color: #dcdcdc;
 }
 
+div.buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+div.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 a {
 	font-family: "Fira-sans", sans-serif;
 	font-size: 30px;
 	display: flex;
 	justify-content: center;
-	// margin: 10px;
+	margin: 10px;
 	padding: 10px;
 	text-decoration: none;
 	border: 2px solid #733fa1;
