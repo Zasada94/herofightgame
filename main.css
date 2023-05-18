@@ -332,7 +332,7 @@ div.pickContainer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 5vh;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .titleWrapper {
@@ -369,10 +369,9 @@ div.pickContainer {
 }
 
 .pickTitle {
-  margin-top: 10%;
-  margin-bottom: 7%;
-  font-size: 2.1vh;
-  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 2vh;
 }
 
 .player1Wrapper,
@@ -444,7 +443,7 @@ div.pickContainer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 10%;
+  margin-top: 8%;
 }
 
 #heroImage img,
@@ -489,7 +488,7 @@ div.pickContainer {
 }
 
 .nextButtons {
-  width: 90%;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -505,6 +504,36 @@ div.pickContainer {
 .nextButtons a {
   margin: 1% 0;
   font-size: 2vh;
+}
+
+#wrapper.active h1 {
+  font-size: 8.88vw;
+}
+#wrapper.active .vs {
+  font-size: 7.08vw;
+}
+#wrapper.active #heroImage h2,
+#wrapper.active #heroImage2 h2 {
+  font-size: 6.2vw;
+}
+#wrapper.active .buttons {
+  font-size: 5.31vw;
+}
+#wrapper.active #heroImage2 p,
+#wrapper.active #heroImage p {
+  font-size: 4.425vw;
+}
+#wrapper.active .nextButtons a,
+#wrapper.active .pickTitle {
+  font-size: 3.54vw;
+}
+#wrapper.active #newHeroButton,
+#wrapper.active #newHeroButton2,
+#wrapper.active #searchButton,
+#wrapper.active #searchButton2,
+#wrapper.active #searchInput,
+#wrapper.active #searchInput2 {
+  font-size: 2.65vw;
 }
 
 * {
