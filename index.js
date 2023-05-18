@@ -1,17 +1,16 @@
 const body = document.getElementById("body");
-const container = document.getElementById("container");
 const wrapper = document.getElementById("wrapper");
-let windowWidth = body.offsetWidth;
-let pageWidth = wrapper.offsetWidth;
-if (pageWidth >= windowWidth) {
-	container.classList.add("active");
-}
-window.addEventListener("resize", () => {
+
+function responsiveFonts() {
 	windowWidth = body.offsetWidth;
 	pageWidth = wrapper.offsetWidth;
 	if (pageWidth >= windowWidth) {
-		container.classList.add("active");
+		wrapper.classList.add("active");
 	} else {
-		container.classList.remove("active");
+		wrapper.classList.remove("active");
 	}
+}
+responsiveFonts();
+window.addEventListener("resize", () => {
+	responsiveFonts();
 });
