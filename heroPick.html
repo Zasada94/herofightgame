@@ -13,27 +13,38 @@
 
 <body>
     <div class="pickContainer">
-        <h1>Hero Fighting Game</h1>
+        <div class="titleWrapper">
+            <h1>Hero Fighting Game</h1>
+            <div class="playersWrapper">
 
-        <h2 class="pickTitle">Player 1 pick a Hero:</h2>
-        <div class="innerContainer">
-            <input type="text" id="searchInput" placeholder="Type hero name here">
-            <button id="searchButton" type="submit">Search</button>
+                <div class="player1Wrapper">
+                    <h2 class="pickTitle">Player 1 pick a Hero:</h2>
+                    <div class="innerContainer">
+                        <input type="text" id="searchInput" placeholder="Type hero name here">
+                        <button id="searchButton" type="submit">Search</button>
+                    </div>
+                    <button id="newHeroButton">Get Random Hero</button>
 
-            <button id="newHeroButton">Get Random Hero</button>
+                    <div id="heroImage"><img src="" alt=""></div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="player2Wrapper">
+                    <h2 class="pickTitle">Player 2 pick a Hero:</h2>
+                    <div class="innerContainer">
+                        <input type="text" id="searchInput2" placeholder="Type hero name here">
+                        <button id="searchButton2" type="submit">Search</button>
+                    </div>
+                    <button id="newHeroButton2">Get Random Hero</button>
+
+                    <div id="heroImage2"><img src="" alt=""></div>
+                </div>
+            </div>
         </div>
-        <div id="heroImage"><img src="" alt=""></div>
-        <h2 class="pickTitle">Player 2 pick a Hero:</h2>
-        <div class="innerContainer">
-            <input type="text" id="searchInput2" placeholder="Type hero name here">
-            <button id="searchButton2" type="submit">Search</button>
-
-            <button id="newHeroButton2">Get Random Hero</button>
+        <div class="nextButtons">
+            <a href="./game.html">FIGHT</a>
+            <a href="./index.html">Back to Menu</a>
+            <a href="https://github.com/Zasada94">Back to Github</a>
         </div>
-        <div id="heroImage2"><img src="" alt=""></div>
-        <a href="./game.html" class="playButton">FIGHT</a>
-        <a href="./index.html">Back to Menu</a>
-        <a href="https://github.com/Zasada94">Back to Github</a>
     </div>
     <script src="heroPick.js"></script>
 </body>

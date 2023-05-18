@@ -305,7 +305,7 @@ div.pickContainer {
   display: flex;
   border: 5px solid #c1950e;
   border-radius: 20px;
-  padding: 40px;
+  padding: 40px 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -313,9 +313,9 @@ div.pickContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 100vh;
   width: 100vw;
   max-width: 56vh;
@@ -326,15 +326,82 @@ div.pickContainer {
   color: #dcdcdc;
 }
 
+.pickContainer h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c1950e), to(red));
+  background-image: linear-gradient(#c1950e, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5vh;
+  margin-bottom: 5%;
+}
+
+.titleWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.playersWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.vs {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c1950e), to(red));
+  background-image: linear-gradient(#c1950e, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 4vh;
+  padding: 0 2%;
+}
+
 .pickTitle {
-  margin-top: 20px;
+  margin-top: 10%;
+  margin-bottom: 7%;
+  font-size: 2.1vh;
+  width: 100%;
+}
+
+.player1Wrapper,
+.player2Wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.innerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5%;
 }
 
 #newHeroButton,
 #newHeroButton2,
 #searchButton,
 #searchButton2 {
-  font-size: 15px;
+  font-size: 1.5vh;
   font-weight: 700;
   background-image: -webkit-gradient(linear, left top, right top, from(#e5adff), to(#733fa1));
   background-image: linear-gradient(to right, #e5adff, #733fa1);
@@ -342,15 +409,22 @@ div.pickContainer {
   -webkit-text-fill-color: transparent;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  padding: 2px;
+  padding: 1% 2%;
   border: 1px solid #733fa1;
   border-radius: 5px;
 }
 
+#newHeroButton,
+#newHeroButton2 {
+  width: 90%;
+}
+
 #searchInput,
 #searchInput2 {
-  font-size: 15px;
-  padding: 2px;
+  font-size: 1.5vh;
+  padding: 4px;
+  border-radius: 5px;
+  width: 75%;
 }
 
 #newHeroButton:hover,
@@ -370,16 +444,17 @@ div.pickContainer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10%;
 }
 
 #heroImage img,
 #heroImage2 img {
-  max-width: 80%;
+  max-width: 95%;
   height: auto;
   -ms-flex-item-align: center;
       align-self: center;
+  margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 #heroImage h2,
@@ -392,7 +467,7 @@ div.pickContainer {
   padding-top: 5px;
   -ms-flex-item-align: center;
       align-self: center;
-  font-size: 35px;
+  font-size: 3.5vh;
 }
 
 #heroImage2 p,
@@ -403,7 +478,7 @@ div.pickContainer {
   -webkit-text-fill-color: transparent;
   padding: 3px;
   text-align: center;
-  font-size: 20px;
+  font-size: 2.5vh;
 }
 
 #heroImage p span,
@@ -413,20 +488,25 @@ div.pickContainer {
   -webkit-text-fill-color: initial;
 }
 
-@media (min-width: 720px) {
-  .innerContainer #newHeroButton,
-.innerContainer #newHeroButton2,
-.innerContainer #searchButton,
-.innerContainer #searchButton2,
-.innerContainer #searchInput,
-.innerContainer #searchInput2 {
-    font-size: 20px;
-  }
-  #heroImage2 p,
-#heroImage p {
-    font-size: 30px !important;
-  }
+.nextButtons {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
+.nextButtons a {
+  margin: 1% 0;
+  font-size: 2vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -494,6 +574,7 @@ div.buttons {
           align-items: center;
   width: 100%;
   padding: 10%;
+  font-size: 3vh;
 }
 
 div.container {
@@ -512,7 +593,6 @@ div.container {
 
 a {
   font-family: "Fira-sans", sans-serif;
-  font-size: 3vh;
   color: #dcdcdc;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -568,6 +648,6 @@ a:hover {
 .wrapper.active h3 {
   font-size: 4.425vw;
 }
-.wrapper.active a {
+.wrapper.active .buttons {
   font-size: 5.31vw;
 }/*# sourceMappingURL=main.css.map */

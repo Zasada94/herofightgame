@@ -43,6 +43,7 @@ div.buttons {
 	align-items: center;
 	width: 100%;
 	padding: 10%;
+	font-size: 3vh;
 }
 
 div.container {
@@ -53,7 +54,6 @@ div.container {
 }
 a {
 	font-family: "Fira-sans", sans-serif;
-	font-size: 3vh;
 	color: #dcdcdc;
 	display: flex;
 	justify-content: center;
@@ -73,10 +73,6 @@ a:hover {
 	background-color: #dcdcdc;
 	color: black;
 }
-
-// .playButton {
-// 	margin-top: 60%;
-// }
 
 .container h1 {
 	background-image: linear-gradient(#c1950e, red);
@@ -107,7 +103,7 @@ a:hover {
 	h3 {
 		font-size: 4.425vw;
 	}
-	a {
+	.buttons {
 		font-size: 5.31vw;
 	}
 }
