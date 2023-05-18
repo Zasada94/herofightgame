@@ -461,7 +461,7 @@ div.wrapper {
   display: flex;
   border: 5px solid #c1950e;
   border-radius: 20px;
-  padding: 40px;
+  padding: 5%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -533,44 +533,34 @@ a {
   background-image: linear-gradient(#c1950e, red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 5vh;
 }
 
 .container h2 {
   margin-top: 5px;
   margin-bottom: 10px;
+  font-size: 4vh;
 }
 
 .container h3 {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin: 5px;
+  font-size: 2.5vh;
+}
+
+.container.active h1 {
+  font-size: 11.55vw;
+}
+.container.active h2 {
+  font-size: 7vw;
+}
+.container.active h3 {
+  font-size: 5vw;
 }
 
 a:hover {
   background-color: #733fa1;
   border-color: #353ca7;
   color: black;
-}
-
-@media (max-width: 720px) {
-  a {
-    font-size: 20px;
-    padding: 5px;
-  }
-}
-@media (min-width: 720px) {
-  .container h1 {
-    font-size: 60px;
-  }
-  .container h2 {
-    font-size: 40px;
-  }
-  .container h3 {
-    font-size: 27px;
-  }
-}
-@media (min-width: 1280px) {
-  .container h1 {
-    font-size: 70px;
-  }
 }/*# sourceMappingURL=main.css.map */

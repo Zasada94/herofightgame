@@ -24,7 +24,7 @@ div.wrapper {
 	display: flex;
 	border: 5px solid #c1950e;
 	border-radius: 20px;
-	padding: 40px;
+	padding: 5%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
@@ -73,16 +73,31 @@ a {
 	background-image: linear-gradient(#c1950e, red);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	font-size: 5vh;
 }
 
 .container h2 {
 	margin-top: 5px;
 	margin-bottom: 10px;
+	font-size: 4vh;
 }
 
 .container h3 {
 	align-self: flex-start;
 	margin: 5px;
+	font-size: 2.5vh;
+}
+
+.container.active {
+	h1 {
+		font-size: 11.55vw;
+	}
+	h2 {
+		font-size: 7vw;
+	}
+	h3 {
+		font-size: 5vw;
+	}
 }
 
 a:hover {
@@ -91,35 +106,35 @@ a:hover {
 	color: black;
 }
 
-@media (max-width: 720px) {
-	.menu {
-		// width: 75%;
-	}
-	div.container {
-		// max-width: 95%;
-	}
-	a {
-		font-size: 20px;
-		padding: 5px;
-	}
-}
-@media (min-width: 720px) {
-	.container h1 {
-		font-size: 60px;
-	}
-	.container h2 {
-		font-size: 40px;
-	}
+// @media (max-width: 720px) {
+// 	.menu {
+// 		// width: 75%;
+// 	}
+// 	div.container {
+// 		// max-width: 95%;
+// 	}
+// 	a {
+// 		font-size: 20px;
+// 		padding: 5px;
+// 	}
+// }
+// @media (min-width: 720px) {
+// 	.container h1 {
+// 		font-size: 60px;
+// 	}
+// 	.container h2 {
+// 		font-size: 40px;
+// 	}
 
-	.container h3 {
-		font-size: 27px;
-	}
-}
-@media (min-width: 1280px) {
-	div.container {
-		// max-width: 50%;
-	}
-	.container h1 {
-		font-size: 70px;
-	}
-}
+// 	.container h3 {
+// 		font-size: 27px;
+// 	}
+// }
+// @media (min-width: 1280px) {
+// 	div.container {
+// 		// max-width: 50%;
+// 	}
+// 	.container h1 {
+// 		font-size: 70px;
+// 	}
+// }
