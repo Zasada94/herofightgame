@@ -612,7 +612,7 @@ body {
 	-ms-flex-align: center;
 	align-items: center;
 	font-family: "VT323", monospace;
-	background-image: url("./photo/background.jpg");
+	background-image: url(./photo/background.jpg);
 	background-size: cover;
 }
 
@@ -643,9 +643,9 @@ div.wrapper {
 			from(rgba(0, 0, 0, 0.5)),
 			to(rgba(0, 0, 0, 0.5))
 		),
-		url("./photo/containerBg.jpg");
+		url(./photo/containerBg.jpg);
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-		url("./photo/containerBg.jpg");
+		url(./photo/containerBg.jpg);
 	background-size: cover;
 	color: #dcdcdc;
 }
