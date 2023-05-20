@@ -84,7 +84,7 @@ div.gameContainer {
 	flex-direction: column;
 	justify-content: space-around;
 	width: 100%;
-	height: 10%;
+	height: 20%;
 	align-items: center;
 }
 
@@ -114,7 +114,7 @@ div.gameContainer {
 }
 
 #attack {
-	height: 100%;
+	height: 80%;
 	width: 35%;
 	border-radius: 10px;
 	padding: 3% 0;
@@ -128,7 +128,7 @@ div.gameContainer {
 }
 
 #heal {
-	height: 100%;
+	height: 80%;
 	width: 35%;
 	border-radius: 10px;
 	padding: 3% 0;
@@ -181,6 +181,7 @@ div.gameContainer {
 	color: #dcdcdc;
 	font-size: 2vh;
 	border: 2px solid #dcdcdc;
+	transition: 0.4s;
 }
 
 #back {
