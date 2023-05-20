@@ -4,17 +4,12 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-body {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+
 div.gameContainer {
 	display: flex;
 	border: 5px solid #c1950e;
 	border-radius: 20px;
-	padding: 40px;
+	padding: 5% 3%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
@@ -27,16 +22,29 @@ div.gameContainer {
 	background-size: cover;
 	color: #dcdcdc;
 }
+
+.gameContainer h1 {
+	background-image: linear-gradient(#c1950e, red);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 5vh;
+	margin-bottom: 2%;
+}
+
+.titleWrapper {
+	width: 100%;
+}
+
 .menu {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 }
 #p1,
 #p2 {
-	width: 120px;
-	height: 165px;
+	width: 100%;
+	height: auto;
 	align-self: center;
 }
 
@@ -46,13 +54,16 @@ div.gameContainer {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 45%;
-	padding: 10px;
+	width: 47%;
 }
 
 #p1Name,
 #p2Name {
-	font-size: 20px;
+	background-image: linear-gradient(to right, #733fa1, #e5adff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 3vh;
+	padding: 5px 0;
 }
 
 #p1Health,
@@ -112,6 +123,7 @@ div.gameContainer {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-size: 40px;
+	align-self: center;
 }
 
 #reset,
@@ -144,99 +156,99 @@ div.gameContainer {
 	height: auto;
 	width: 90%;
 }
-@media (max-width: 320px) {
-	#p1,
-	#p2 {
-		width: 80px;
-		height: 120px;
-	}
-}
-@media (min-width: 480px) {
-	#p1,
-	#p2 {
-		width: 200px;
-		height: 280px;
-	}
-}
+// @media (max-width: 320px) {
+// 	#p1,
+// 	#p2 {
+// 		width: 80px;
+// 		height: 120px;
+// 	}
+// }
+// @media (min-width: 480px) {
+// 	#p1,
+// 	#p2 {
+// 		width: 200px;
+// 		height: 280px;
+// 	}
+// }
 
-@media (min-width: 720px) {
-	#p1Name,
-	#p2Name {
-		font-size: 50px;
-	}
-	#p1,
-	#p2 {
-		width: 300px;
-		height: 420px;
-	}
-	#vs {
-		font-size: 60px;
-	}
-	#reset,
-	#back,
-	#play {
-		margin-bottom: 10px;
-		height: 60px;
-		width: 150px;
-		border-radius: 20px;
-		font-size: 20px;
-	}
-	#p1Health,
-	#p2Health {
-		font-size: 60px;
-	}
-	.AttackDiv {
-		height: 60px;
-		width: 130px;
-		font-size: 40px;
-	}
+// @media (min-width: 720px) {
+// 	#p1Name,
+// 	#p2Name {
+// 		font-size: 50px;
+// 	}
+// 	#p1,
+// 	#p2 {
+// 		width: 300px;
+// 		height: 420px;
+// 	}
+// 	#vs {
+// 		font-size: 60px;
+// 	}
+// 	#reset,
+// 	#back,
+// 	#play {
+// 		margin-bottom: 10px;
+// 		height: 60px;
+// 		width: 150px;
+// 		border-radius: 20px;
+// 		font-size: 20px;
+// 	}
+// 	#p1Health,
+// 	#p2Health {
+// 		font-size: 60px;
+// 	}
+// 	.AttackDiv {
+// 		height: 60px;
+// 		width: 130px;
+// 		font-size: 40px;
+// 	}
 
-	.HealDiv {
-		height: 60px;
-		width: 130px;
-		font-size: 40px;
-	}
+// 	.HealDiv {
+// 		height: 60px;
+// 		width: 130px;
+// 		font-size: 40px;
+// 	}
 
-	#attack {
-		height: 50px;
-		width: 100px;
-		font-size: 20px;
-	}
+// 	#attack {
+// 		height: 50px;
+// 		width: 100px;
+// 		font-size: 20px;
+// 	}
 
-	#heal {
-		height: 50px;
-		width: 100px;
-		font-size: 20px;
-	}
-}
+// 	#heal {
+// 		height: 50px;
+// 		width: 100px;
+// 		font-size: 20px;
+// 	}
+// }
 
-@media (min-width: 1280px) {
-	#p1Name,
-	#p2Name {
-		font-size: 70px;
-	}
-	#vs {
-		font-size: 80px;
-	}
-	#reset,
-	#back,
-	#play {
-		margin-bottom: 10px;
-		height: 60px;
-		width: 150px;
-		border-radius: 20px;
-		font-size: 20px;
-	}
-	#p1Health,
-	#p2Health {
-		font-size: 70px;
-	}
-	#result {
-		font-size: 70px;
-		height: 60px;
-		margin-bottom: 20px;
-	}
-	div.container {
-		max-width: 1400px;
-	}
-}
+// @media (min-width: 1280px) {
+// 	#p1Name,
+// 	#p2Name {
+// 		font-size: 70px;
+// 	}
+// 	#vs {
+// 		font-size: 80px;
+// 	}
+// 	#reset,
+// 	#back,
+// 	#play {
+// 		margin-bottom: 10px;
+// 		height: 60px;
+// 		width: 150px;
+// 		border-radius: 20px;
+// 		font-size: 20px;
+// 	}
+// 	#p1Health,
+// 	#p2Health {
+// 		font-size: 70px;
+// 	}
+// 	#result {
+// 		font-size: 70px;
+// 		height: 60px;
+// 		margin-bottom: 20px;
+// 	}
+// 	div.container {
+// 		max-width: 1400px;
+// 	}
+// }

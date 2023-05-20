@@ -2,7 +2,7 @@ div.pickContainer {
 	display: flex;
 	border: 5px solid #c1950e;
 	border-radius: 20px;
-	padding: 40px 30px;
+	padding: 5% 3%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
@@ -124,7 +124,7 @@ div.pickContainer {
 	padding-bottom: 5px;
 	padding-top: 5px;
 	align-self: center;
-	font-size: 3.5vh;
+	font-size: 3vh;
 }
 
 #heroImage2 p,
@@ -163,11 +163,12 @@ div.pickContainer {
 	.vs {
 		font-size: 7.08vw; //4vh
 	}
+	//  {
+	// 	font-size: 6.2vw; //3.6vh
+	// }
+	.buttons,
 	#heroImage h2,
 	#heroImage2 h2 {
-		font-size: 6.2vw; //3.6vh
-	}
-	.buttons {
 		font-size: 5.31vw; //3vh
 	}
 	#heroImage2 p,
