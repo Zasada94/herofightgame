@@ -45,10 +45,12 @@ div.gameContainer {
 
 .titleWrapper {
   width: 100%;
+  height: 90%;
 }
 
 .menu {
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,10 +64,14 @@ div.gameContainer {
 
 #p1,
 #p2 {
+  height: 100%;
   width: 100%;
-  height: auto;
   -ms-flex-item-align: center;
       align-self: center;
+}
+
+.imageContainer {
+  height: 100%;
 }
 
 .p1Info,
@@ -77,13 +83,13 @@ div.gameContainer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 47%;
+  width: 45%;
+  height: 100%;
 }
 
 #p1Name,
@@ -98,7 +104,8 @@ div.gameContainer {
 
 #p1Health,
 #p2Health {
-  font-size: 50px;
+  font-size: 5vh;
+  margin: 5% 0;
 }
 
 .playerControls {
@@ -111,9 +118,14 @@ div.gameContainer {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 100%;
+  height: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.AttackDiv {
+.attackDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,11 +134,19 @@ div.gameContainer {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 40px;
-  width: 100px;
+  width: 100%;
+  height: 100%;
+  margin: 5% 0 2% 0;
+  font-size: 2vh;
+  font-family: "Fira-sans", sans-serif;
 }
 
-.HealDiv {
+.attackDiv button,
+.healDiv button {
+  font-size: 1.5vh;
+}
+
+.healDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,33 +155,41 @@ div.gameContainer {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 40px;
-  width: 100px;
+  height: 100%;
+  width: 100%;
+  margin: 2% 0 5% 0;
+  font-size: 2vh;
 }
 
 #attack {
-  height: 30px;
-  width: 60px;
-  border-radius: 50px;
+  height: 100%;
+  width: 35%;
+  border-radius: 10px;
+  padding: 3% 0;
   border: none;
   background: #ffff01;
   outline: none;
+  font-family: "Fira-sans", sans-serif;
+  font-weight: 700;
 }
 
 #heal {
-  height: 30px;
-  width: 60px;
-  border-radius: 50px;
+  height: 100%;
+  width: 35%;
+  border-radius: 10px;
+  padding: 3% 0;
   border: none;
   background: #7dffff;
   outline: none;
+  font-family: "Fira-sans", sans-serif;
+  font-weight: 700;
 }
 
 #result {
-  font-size: 35px;
+  font-size: 4vh;
   color: #3dff3d;
-  height: 50px;
-  margin-bottom: 10px;
+  height: 15%;
+  margin-bottom: 3%;
 }
 
 #vs {
@@ -169,7 +197,7 @@ div.gameContainer {
   background-image: linear-gradient(#c1950e, red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 40px;
+  font-size: 5vh;
   -ms-flex-item-align: center;
       align-self: center;
 }
@@ -178,14 +206,13 @@ div.gameContainer {
 #back,
 #play {
   font-family: "Fira-sans", sans-serif;
-  margin-bottom: 10px;
-  height: 50px;
-  width: 120px;
-  border-radius: 20px;
+  font-weight: 700;
+  height: 20%;
+  width: 30%;
+  border-radius: 10px;
   background: #ff8800;
   outline: none;
   color: #dcdcdc;
-  font-size: 15px;
 }
 
 #back {
@@ -209,7 +236,7 @@ div.gameContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: auto;
+  height: 35%;
   width: 90%;
 }
 
