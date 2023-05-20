@@ -138,7 +138,6 @@ div.gameContainer {
   height: 100%;
   margin: 5% 0 2% 0;
   font-size: 2vh;
-  font-family: "Fira-sans", sans-serif;
 }
 
 .attackDiv button,
@@ -167,7 +166,9 @@ div.gameContainer {
   border-radius: 10px;
   padding: 3% 0;
   border: none;
-  background: #ffff01;
+  background: #1f9c6d;
+  color: #dcdcdc;
+  border: 2px solid #dcdcdc;
   outline: none;
   font-family: "Fira-sans", sans-serif;
   font-weight: 700;
@@ -179,10 +180,24 @@ div.gameContainer {
   border-radius: 10px;
   padding: 3% 0;
   border: none;
-  background: #7dffff;
+  background: #175f7a;
+  color: #dcdcdc;
+  border: 2px solid #dcdcdc;
   outline: none;
   font-family: "Fira-sans", sans-serif;
   font-weight: 700;
+}
+
+#attack:active {
+  background: #dcdcdc;
+  color: black;
+  border: 2px solid #1f9c6d;
+}
+
+#heal:active {
+  background: #dcdcdc;
+  color: black;
+  border: 2px solid #175f7a;
 }
 
 #result {
@@ -208,19 +223,46 @@ div.gameContainer {
   font-family: "Fira-sans", sans-serif;
   font-weight: 700;
   height: 20%;
-  width: 30%;
+  width: 38%;
   border-radius: 10px;
-  background: #ff8800;
+  background: #555a56;
   outline: none;
   color: #dcdcdc;
+  font-size: 2vh;
+  padding: 2% 2%;
+  border: 2px solid #dcdcdc;
 }
 
 #back {
-  background: grey;
+  background: #3e4943;
 }
 
 #play {
-  background: #02cf02;
+  background: #5e785d;
+}
+
+#play:hover {
+  background: #dcdcdc;
+  color: black;
+  border: 2px solid #5e785d;
+  -webkit-box-shadow: inset -1px -1px 10px 0px rgb(94, 120, 93);
+          box-shadow: inset -1px -1px 10px 0px rgb(94, 120, 93);
+}
+
+#back:hover {
+  background: #dcdcdc;
+  color: black;
+  border: 2px solid #3e4943;
+  -webkit-box-shadow: inset -1px -1px 10px 0px rgb(62, 73, 67);
+          box-shadow: inset -1px -1px 10px 0px rgb(62, 73, 67);
+}
+
+#reset:hover {
+  background: #dcdcdc;
+  color: black;
+  border: 2px solid #555a56;
+  -webkit-box-shadow: inset -1px -1px 10px 0px rgb(85, 90, 86);
+          box-shadow: inset -1px -1px 10px 0px rgb(85, 90, 86);
 }
 
 .resultContainer {
