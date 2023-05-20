@@ -166,3 +166,21 @@ document.addEventListener("keydown", function (e) {
 const backToMenu = () => {
 	location.href = "./index.html";
 };
+
+//responsive fonts
+const body = document.getElementById("body");
+const gameContainer = document.getElementById("gameContainer");
+
+function responsiveFonts() {
+	windowWidth = body.offsetWidth;
+	pageWidth = gameContainer.offsetWidth;
+	if (pageWidth >= windowWidth) {
+		gameContainer.classList.add("active");
+	} else {
+		gameContainer.classList.remove("active");
+	}
+}
+responsiveFonts();
+window.addEventListener("resize", () => {
+	responsiveFonts();
+});

@@ -212,7 +212,7 @@ div.gameContainer {
   background-image: linear-gradient(#c1950e, red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 5vh;
+  font-size: 4vh;
   -ms-flex-item-align: center;
       align-self: center;
 }
@@ -223,13 +223,12 @@ div.gameContainer {
   font-family: "Fira-sans", sans-serif;
   font-weight: 700;
   height: 20%;
-  width: 38%;
+  width: 45%;
   border-radius: 10px;
   background: #555a56;
   outline: none;
   color: #dcdcdc;
   font-size: 2vh;
-  padding: 2% 2%;
   border: 2px solid #dcdcdc;
 }
 
@@ -280,6 +279,29 @@ div.gameContainer {
           align-items: center;
   height: 35%;
   width: 90%;
+}
+
+#gameContainer.active h1,
+#gameContainer.active #p1Health,
+#gameContainer.active #p2Health {
+  font-size: 8.88vw;
+}
+#gameContainer.active #vs,
+#gameContainer.active #result {
+  font-size: 7.08vw;
+}
+#gameContainer.active #p1Name,
+#gameContainer.active #p2Name {
+  font-size: 5.31vw;
+}
+#gameContainer.active .attackDiv,
+#gameContainer.active .healDiv,
+#gameContainer.active #reset,
+#gameContainer.active #back,
+#gameContainer.active #play,
+#gameContainer.active #attack,
+#gameContainer.active #heal {
+  font-size: 3.54vw;
 }
 
 div.pickContainer {
