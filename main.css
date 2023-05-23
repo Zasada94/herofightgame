@@ -415,7 +415,7 @@ div.pickContainer {
   -webkit-text-fill-color: transparent;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  padding: 1% 2%;
+  padding: 0 2%;
   border: 1px solid #733fa1;
   border-radius: 5px;
 }
@@ -423,6 +423,7 @@ div.pickContainer {
 #newHeroButton,
 #newHeroButton2 {
   width: 90%;
+  padding: 4px;
 }
 
 #searchInput,
