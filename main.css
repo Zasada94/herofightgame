@@ -484,7 +484,7 @@ div.pickContainer {
   -webkit-text-fill-color: transparent;
   padding: 3px;
   text-align: center;
-  font-size: 2.5vh;
+  font-size: 2vh;
 }
 
 #heroImage p span,
@@ -509,6 +509,7 @@ div.pickContainer {
 }
 
 .nextButtons a {
+  cursor: pointer;
   margin: 1% 0;
   font-size: 2vh;
 }
@@ -524,12 +525,10 @@ div.pickContainer {
 #wrapper.active #heroImage2 h2 {
   font-size: 5.31vw;
 }
+#wrapper.active .nextButtons a,
+#wrapper.active .pickTitle,
 #wrapper.active #heroImage2 p,
 #wrapper.active #heroImage p {
-  font-size: 4.425vw;
-}
-#wrapper.active .nextButtons a,
-#wrapper.active .pickTitle {
   font-size: 3.54vw;
 }
 #wrapper.active #newHeroButton,

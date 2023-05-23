@@ -10,6 +10,9 @@ const searchButton = document.getElementById("searchButton");
 const searchButton2 = document.getElementById("searchButton2");
 const searchInput = document.getElementById("searchInput");
 const searchInput2 = document.getElementById("searchInput2");
+const fightButton = document.getElementById("fightButton");
+let player1chosed = false;
+let player2chosed = false;
 
 const statToEmoji = {
 	intelligence: "🧠",
@@ -21,6 +24,8 @@ const statToEmoji = {
 };
 
 const getSuperHero = (id) => {
+	player1chosed = true;
+	checkIfChosed();
 	fetch(`${BASE_URL}/${id}`)
 		.then((response) => response.json())
 		.then((json) => {
@@ -28,6 +33,8 @@ const getSuperHero = (id) => {
 		});
 };
 const getSuperHero2 = (id) => {
+	player2chosed = true;
+	checkIfChosed();
 	fetch(`${BASE_URL}/${id}`)
 		.then((response) => response.json())
 		.then((json) => {
@@ -142,6 +149,8 @@ const getSearchedSuperHero = (name) => {
 		.then((json) => {
 			const hero = json.results[0];
 			showHeroInfo(hero);
+			player1chosed = true;
+			checkIfChosed();
 		});
 };
 
@@ -151,7 +160,17 @@ const getSearchedSuperHero2 = (name) => {
 		.then((json) => {
 			const hero = json.results[0];
 			showHeroInfo2(hero);
+			player2chosed = true;
+			checkIfChosed();
 		});
+};
+
+const checkIfChosed = () => {
+	if (player1chosed == true && player2chosed == true) {
+		fightButton.innerHTML = `            <a href="./game.html">FIGHT</a>
+		<a href="./index.html">Back to Menu</a>
+		<a href="https://github.com/Zasada94">Back to Github</a>`;
+	}
 };
 
 const randomHero = () => {
@@ -177,7 +196,6 @@ searchInput2.addEventListener("keyup", (e) => {
 		searchButton2.click();
 	}
 });
-
 
 //responsive fonts
 const body = document.getElementById("body");
